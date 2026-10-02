@@ -492,54 +492,90 @@ h2 {
   color: #ffd0e6;
 }
 
-.order {
-  background: var(--paper);
+.doordash {
+  background: #ff3008;
+  color: #fff;
   padding: 0;
 }
 
-.order-inner {
+.doordash-inner {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 4rem 1.4rem;
+  padding: 4.5rem 1.6rem;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.4rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.8rem;
   align-items: center;
 }
 
-.order-copy p:last-of-type {
-  margin: 0 0 1.4rem;
-  font-size: 1.08rem;
-  max-width: 36rem;
+.doordash-logo {
+  margin: 0 0 0.85rem;
+  font-family: Outfit, system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.65rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
-.order-photo {
+.doordash h2 {
+  margin: 0 0 0.7rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.doordash-copy p:last-of-type {
+  margin: 0 0 1.7rem;
+  max-width: 28rem;
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.doordash-photo {
   margin: 0;
 }
 
-.order-photo .photo-clip {
-  overflow: hidden;
-  box-shadow: 14px 14px 0 var(--pink);
-}
-
-.order-photo img {
+.doordash-photo img {
   width: 100%;
-  height: 320px;
+  height: 360px;
   object-fit: cover;
+  border-radius: 28px;
 }
 
+.doordash-cta,
 .dd-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-  background: #ff3008;
-  color: #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: #ff3008;
   text-decoration: none;
   font-family: Outfit, system-ui, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.doordash-cta {
+  padding: 0.95rem 1.7rem;
+  font-size: 1.08rem;
+}
+
+.doordash-cta:hover,
+.dd-btn:hover {
+  background: #191919;
+  color: #fff;
+}
+
+.dd-btn {
+  background: #ff3008;
+  color: #fff;
   font-size: 0.95rem;
-  padding: 0.75rem 1.15rem;
-  transition: background 0.2s ease;
+  padding: 0.75rem 1.2rem;
 }
 
 .dd-btn svg {
@@ -549,7 +585,7 @@ h2 {
 }
 
 .dd-btn:hover {
-  background: #d42606;
+  background: #191919;
 }
 
 .gallery {
@@ -756,11 +792,11 @@ h2 {
   .about .section-inner,
   .visit-bar,
   .menu-grid,
-  .order-inner {
+  .doordash-inner {
     grid-template-columns: 1fr;
   }
 
-  .order-photo img {
+  .doordash-photo img {
     height: 240px;
   }
 
