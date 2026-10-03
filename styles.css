@@ -360,39 +360,35 @@ h2 {
   opacity: 0.75;
 }
 
-.menu-photos {
+.menu-boards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.55rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   max-width: 1140px;
   margin: 0 auto 2rem;
   padding: 0 1.4rem;
 }
 
-.menu-photos figure {
+.menu-boards figure {
   margin: 0;
-  position: relative;
+  background: #fff;
   overflow: hidden;
-  min-height: 170px;
 }
 
-.menu-photos img {
+.menu-boards img {
   width: 100%;
-  height: 170px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
-.menu-photos figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.55rem 0.7rem;
+.menu-boards figcaption {
+  padding: 0.55rem 0.8rem 0.7rem;
   font-family: Outfit, system-ui, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: linear-gradient(transparent, rgba(42, 22, 18, 0.78));
+  color: var(--brown);
+  background: var(--paper);
 }
 
 .menu-highlights {
@@ -451,6 +447,10 @@ h2 {
   margin: 0 0 0.85rem;
 }
 
+.menu-card ul + h3 {
+  margin-top: 1.5rem;
+}
+
 .menu-card ul {
   list-style: none;
   margin: 0;
@@ -490,6 +490,49 @@ h2 {
   font-weight: 600;
   white-space: nowrap;
   color: #ffd0e6;
+}
+
+.order {
+  background:
+    radial-gradient(circle at 90% 20%, rgba(235, 23, 0, 0.12), transparent 36%),
+    var(--paper);
+  padding: 0;
+}
+
+.order-inner {
+  display: grid;
+  grid-template-columns: 1.4fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 3.6rem 1.4rem;
+}
+
+.order p:last-child {
+  max-width: 36rem;
+  margin-bottom: 0;
+}
+
+.dd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #eb1700;
+  color: #fff;
+  text-decoration: none;
+  font-family: Outfit, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  padding: 1.05rem 1.7rem;
+  border-radius: 10px;
+  min-width: 250px;
+  box-shadow: 0 12px 28px rgba(235, 23, 0, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dd-btn:hover {
+  background: #c41200;
+  transform: translateY(-2px);
 }
 
 .gallery {
@@ -678,13 +721,13 @@ h2 {
     display: none;
   }
 
-  .menu-photos,
-  .menu-highlights {
-    grid-template-columns: 1fr 1fr;
+  .menu-highlights,
+  .order-inner {
+    grid-template-columns: 1fr;
   }
 
-  .menu-photos img {
-    height: 140px;
+  .dd-btn {
+    width: 100%;
   }
 
   .about .section-inner,
